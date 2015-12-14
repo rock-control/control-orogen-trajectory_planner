@@ -7,9 +7,18 @@ using_library "trajectory_planner"
 task_context "JointsInterpolatorTask" do
   needs_configuration
  
+  property "cycle_time", "double"
+
   input_port "in_joints_traj", "base/JointsTrajectory"
-  
-  output_port "out_joints_traj", "base/JointsTrajectory"
+  output_port "out_joint_commands", "base/samples/Joints"
+  port_driven :in_joints_traj
+
+end
+
+task_context "JointsSendInterpolatorCommandsTask" do
+  needs_configuration
+ 
+  input_port "in_joints_traj", "base/JointsTrajectory"
   output_port "out_joint_commands", "base/samples/Joints"
   periodic 0.001
 end
