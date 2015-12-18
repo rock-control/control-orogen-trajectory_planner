@@ -1,0 +1,4 @@
+configureHook start
+configureHook start 2
+configureHook stop
+startHook

@@ -33,10 +33,10 @@ DummyTask::~DummyTask()
 // documentation about them.
 
 bool DummyTask::configureHook()
-{
+{    std::cout<<"configureHook start"<<std::endl;
     if (! DummyTaskBase::configureHook())
         return false;
-    std::cout<<"configureHook start"<<std::endl;
+    std::cout<<"configureHook start 2"<<std::endl;
     limits=utils::initFromURDF("/home/dfki.uni-bremen.de/rmenon/software/rock_traj/bundles/kuka_lbr/data/urdf/kuka_lbr_left_arm.urdf");
     jointsTrajOut.resize(limits.size(),10);
     jointsTrajOut.names=limits.names;

@@ -26,7 +26,7 @@ task_context "JointsInterpolatorTask" do
   output_port("out_joint_traj", "base/JointsTrajectory").
   doc("Outputs interpolated trajectory points")
 
-  port_driven :in_joints_traj
+  port_driven: in_joints_traj
 
 end
 
@@ -41,4 +41,15 @@ task_context "DummyTask" do
   periodic 2.0
 end
 
+
+task_context "TrajGenTask" do
+  needs_configuration
+  input_port("in_user_response", "bool").
+  doc("Input port to accept user response")
+
+  output_port("out_joint_traj", "base/JointsTrajectory").
+  doc("Outputs sparse trajectory points")
+
+  periodic 2.0
+end
 
