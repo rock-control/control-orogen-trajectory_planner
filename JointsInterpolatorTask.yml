@@ -1,0 +1,9 @@
+--- name:default
+# Max acceleration value in rad/s2 or m/s2 for all joints
+acc_max: 5.0
+# Cycle time of the joint interpolar send commands task
+cycle_time: 0.01
+# Percentage of max attainable speed or acceleration to be used for caculation of synchronisation time
+speed_level: 80
+# End condition: 0 for C"(0)=C"(N)=0, 1 for C'(0)=C'(N)=0
+end_condition: 0

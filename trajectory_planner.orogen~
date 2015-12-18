@@ -1,24 +1,31 @@
 name "trajectory_planner"
 
 import_types_from "base"
-import_types_from "trajectoryplannerTypes.hpp"
+import_types_from "trajectory_plannerTypes.hpp"
 using_library "trajectory_planner"
 
 task_context "JointsInterpolatorTask" do
   needs_configuration
  
-  property "cycle_time", "double"
+  property("cycle_time", "double").
+  doc("Cycle time of the joint interpolar send commands task")
+  
+  property("speed_level", "int").
+  doc("Percentage of max attainable speed or acceleration to be used for caculation of synchronisation time")
+  
+  property("acc_max", "double").
+  doc("Max acceleration value in rad/s2 or m/s2 for all joints")
+  
+  property("end_condition", "int").
+  doc("End condition: 0 for C"0=C"N=0, 1 for C'0=C'N=0")
 
-  input_port "in_joints_traj", "base/JointsTrajectory"
-  output_port "out_joint_commands", "base/samples/Joints"
+  input_port("in_joints_traj", "base/JointsTrajectory").
+  doc("Receives the sparse trajectory points from the planner or other higher level task")
+  
+  output_port("out_joint_traj", "base/JointsTrajectory").
+  doc("Outputs interpolated trajectory points")
+
   port_driven :in_joints_traj
 
 end
 
-task_context "JointsSendInterpolatorCommandsTask" do
-  needs_configuration
- 
-  input_port "in_joints_traj", "base/JointsTrajectory"
-  output_port "out_joint_commands", "base/samples/Joints"
-  periodic 0.001
-end
