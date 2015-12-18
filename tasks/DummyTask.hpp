@@ -4,6 +4,8 @@
 #define TRAJECTORY_PLANNER_DUMMYTASK_TASK_HPP
 
 #include "trajectory_planner/DummyTaskBase.hpp"
+#include <base/JointsTrajectory.hpp>
+#include <base/JointLimits.hpp>
 
 namespace trajectory_planner {
 
@@ -25,7 +27,17 @@ namespace trajectory_planner {
     {
 	friend class DummyTaskBase;
     protected:
-
+        base::JointsTrajectory jointsTrajOut;
+	base::JointLimits limits;
+	int userResponse;
+	
+	enum GenState{
+	  GENERATION_READY,
+	  GENERATION_ONGOING,
+	  GENERATION_FINISHED
+	};
+	
+	GenState trajGenState;
 
 
     public:

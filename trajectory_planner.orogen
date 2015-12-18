@@ -32,17 +32,13 @@ end
 
 task_context "DummyTask" do
   needs_configuration
-   
-  property("numberOfJoints", "int"). 
-  doc("Number of Joints")
-   
-  property("numberOfPoints", "int").
-  doc("Number of trajectory points, minimum 3")
-  
+  input_port("in_user_response", "bool").
+  doc("Input port to accept user response")
+
   output_port("out_joint_traj", "base/JointsTrajectory").
   doc("Outputs sparse trajectory points")
 
-  periodic 1.0
+  periodic 2.0
 end
 
 
