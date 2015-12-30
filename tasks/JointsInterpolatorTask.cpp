@@ -27,10 +27,8 @@ bool JointsInterpolatorTask::configureHook()
 {
     if (! JointsInterpolatorTaskBase::configureHook())
         return false;
-   
-    if( state() != READY)
-      state( READY );
-    base::JointLimits limits=utils::initFromURDF(_robot_urdf_filepath.value());
+    
+    base::JointLimits limits=utils::initFromURDF("/home/dfki.uni-bremen.de/rmenon/software/rock_traj/bundles/kuka_lbr/data/urdf/kuka_lbr_left_arm.urdf");
     trajIn.resize(limits.size());
     trajIn.names=limits.names;
     
@@ -38,12 +36,6 @@ bool JointsInterpolatorTask::configureHook()
     trajOut.names =limits.names;
     
     jointsTrajCurve.initialise_data(limits,_cycle_time.value(),_acc_max.value(),_speed_level.value(), _end_condition.value());
-    //jointsTrajCurve.initialise_data(limits,0.005,5, 80, 0);
-    
-   
-    
-    if( state() != WAITING_FOR_SPARSE_TRAJ)
-      state( WAITING_FOR_SPARSE_TRAJ );
     
     return true;
 }
@@ -55,29 +47,6 @@ bool JointsInterpolatorTask::startHook()
 }
 void JointsInterpolatorTask::updateHook()
 {
-  
-  
-    if(_in_joints_traj.readNewest(trajIn)==RTT::NewData)
-    {
-      if( state() != INTERPOLATING)
-	state(INTERPOLATING);
-      
-      _out_time_step_sparse.write(trajIn.getTimeSteps());
-      
-      trajOut=jointsTrajCurve.calc_joint_traj_bezier(trajIn);
-      trajOut.names=trajIn.names;
-      
-      _out_joints_traj.write(trajOut);
-      _out_joints_traj2.write(trajIn);
-      
-      _out_time_step_inter.write(trajOut.getTimeSteps());
-      
-      if( state() != WAITING_FOR_SPARSE_TRAJ)
-	state( WAITING_FOR_SPARSE_TRAJ );
-    }
-    
-    
-    
     JointsInterpolatorTaskBase::updateHook();
     
     

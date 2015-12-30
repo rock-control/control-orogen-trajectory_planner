@@ -1,4 +1,0 @@
-1.119 [ Warning][TaskContextServer()] CTaskContext 'transformer_broadcaster' already bound to CORBA Naming Service.
-1.119 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
-1.120 [ Warning][TaskContextServer()] CTaskContext 'transformer_broadcaster_Logger' already bound to CORBA Naming Service.
-1.120 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.

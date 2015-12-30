@@ -1,7 +1,0 @@
-constructor1 
-0.052 [ Warning][TaskContextServer()] CTaskContext 'traj_gen' already bound to CORBA Naming Service.
-0.052 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
-0.053 [ Warning][TaskContextServer()] CTaskContext 'traj_gen_Logger' already bound to CORBA Naming Service.
-0.053 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
-configureHook start
-destructor 
