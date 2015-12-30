@@ -1,0 +1,4 @@
+constructor1 
+configureHook start
+22.154 [ ERROR  ][OrbRunner] caught CORBA exception while marshalling: COMM_FAILURE COMM_FAILURE_WaitingForReply
+destructor 

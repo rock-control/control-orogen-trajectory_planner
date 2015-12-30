@@ -1,0 +1,46 @@
+construct
+3
+10
+4
+construct
+3
+10
+4
+construct
+3
+10
+4
+0.045 [ Warning][TaskContextServer()] CTaskContext 'traj_interpol' already bound to CORBA Naming Service.
+0.046 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+0.047 [ Warning][TaskContextServer()] CTaskContext 'traj_interpol_Logger' already bound to CORBA Naming Service.
+0.047 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+start0  7
+start1  3
+start1
+initialise bCurve rows= 0
+initialise bCurve rows= 0
+initialise bCurve rows= 0
+start2
+start
+End condition= 0
+b-coeffs
+7
+2
+4
+7
+2
+4
+1.287 [ ERROR  ][RemoteInputPort::buildRemoteChannelOutput] in updateHook(): switching to exception state because of unhandled exception
+1.287 [ ERROR  ][RemoteInputPort::buildRemoteChannelOutput]   std::bad_alloc
+dest
+7
+2
+4
+dest
+7
+2
+4
+dest
+7
+2
+4

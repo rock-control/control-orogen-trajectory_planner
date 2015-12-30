@@ -1,0 +1,6 @@
+constructor1 
+configureHook start
+330.143 [ ERROR  ][CDataFlowInterface_i::createConnection] caught CORBA exception while marshalling: TRANSIENT TRANSIENT_ConnectFailed
+333.243 [ ERROR  ][CDataFlowInterface_i::createConnection] A channel of port state has been invalidated during write(), it will be removed
+333.245 [ ERROR  ][CDataFlowInterface_i::createConnection] caught CORBA exception while marshalling: TRANSIENT TRANSIENT_ConnectFailed
+destructor 

@@ -1,0 +1,17 @@
+construct
+3
+10
+4
+construct
+3
+10
+4
+construct
+3
+10
+4
+0.045 [ Warning][TaskContextServer()] CTaskContext 'traj_interpol' already bound to CORBA Naming Service.
+0.045 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+0.046 [ Warning][TaskContextServer()] CTaskContext 'traj_interpol_Logger' already bound to CORBA Naming Service.
+0.046 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+orogen_default_trajectory_planner__JointsInterpolatorTask: /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:337: Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator()(Eigen::DenseCoeffsBase<Derived, 1>::Index, Eigen::DenseCoeffsBase<Derived, 1>::Index) [with Derived = Eigen::Matrix<double, -1, -1, 2>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = double; Eigen::DenseCoeffsBase<Derived, 1>::Index = long int]: Assertion `row >= 0 && row < rows() && col >= 0 && col < cols()' failed.

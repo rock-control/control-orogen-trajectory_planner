@@ -7,6 +7,8 @@ using_library "trajectory_planner"
 task_context "JointsInterpolatorTask" do
   needs_configuration
 
+  runtime_states 'READY', 'WAITING_FOR_SPARSE_TRAJ', 'INTERPOLATING'
+
   property("end_condition","int").
   doc("End condition 0 for zero acc, 1 for zero vel")
 
@@ -19,26 +21,79 @@ task_context "JointsInterpolatorTask" do
   property("acc_max", "double").
   doc("Max acceleration value in rad/s2 or m/s2 for all joints")
   
+  property("robot_urdf_filepath", "std/string").
+  doc("Robot urdf filepath for extracting joint limits")
 
   input_port("in_joints_traj", "base/JointsTrajectory").
   doc("Receives the sparse trajectory points from the planner or other higher level task")
   
-  output_port("out_joint_traj", "base/JointsTrajectory").
+  output_port("out_joints_traj2", "base/JointsTrajectory").
+  doc("Outputs sparse trajectory points")  
+
+  output_port("out_joints_traj", "base/JointsTrajectory").
   doc("Outputs interpolated trajectory points")
 
-  port_driven: in_joints_traj
+  output_port("out_time_step_sparse", "int").
+  doc("Output port for total sparse points")
+
+  output_port("out_time_step_inter", "int").
+  doc("Output port for current time step")
+  
+  periodic 3.0
 
 end
 
-task_context "DummyTask" do
+
+task_context "TrajGenTask" do
   needs_configuration
+
+  runtime_states 'READY', 'GENERATING', 'FINISHED'
+
+  property("number_points","int").
+  doc("no of sparse trajectory points minimum 3 maximum 10")
+
+  property("traj_type","bool").
+  doc("0 for random 1 for trajectory from file")  
+
+  property("traj_filepath", "std/string").
+  doc("Robot trajectory filepath for extracting sparse joint trajectories")
+
+
   input_port("in_user_response", "bool").
   doc("Input port to accept user response")
 
-  output_port("out_joint_traj", "base/JointsTrajectory").
+  input_port("in_joints_state", "base/samples/Joints").
+  doc("Input port to accept joint state")
+
+  output_port("out_joints_state", "base/samples/Joints").
+  doc("Output port to display joint state")
+
+  output_port("out_joints_traj", "base/JointsTrajectory").
   doc("Outputs sparse trajectory points")
 
-  periodic 2.0
+  
+
+  periodic 3.0
+end
+
+
+task_context "TrajExtractTask" do
+  needs_configuration
+
+  runtime_states 'READY', 'EXTRACTING_TRAJ', 'WAITING_FOR_TRAJ'
+
+  
+  input_port("in_joints_traj","base/JointsTrajectory").
+  doc("Input port to accept user response")
+
+  output_port("out_joints_sample", "base/samples/Joints").
+  doc("Output port for joint samples")
+
+  output_port("out_time_step", "int").
+  doc("Output port for current time step")
+
+
+  periodic 0.005
 end
 
 

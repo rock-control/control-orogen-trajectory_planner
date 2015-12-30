@@ -1,0 +1,28 @@
+construct
+3
+10
+4
+construct
+3
+10
+4
+construct
+3
+10
+4
+0.151 [ Warning][TaskContextServer()] CTaskContext 'traj_interpol' already bound to CORBA Naming Service.
+0.151 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+0.152 [ Warning][TaskContextServer()] CTaskContext 'traj_interpol_Logger' already bound to CORBA Naming Service.
+0.152 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+dest
+3
+10
+4
+dest
+3
+10
+4
+dest
+3
+10
+4
