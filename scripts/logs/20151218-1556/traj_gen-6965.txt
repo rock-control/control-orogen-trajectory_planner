@@ -1,0 +1,16 @@
+construct
+3
+10
+4
+construct
+3
+10
+4
+construct
+3
+10
+4
+0.054 [ Warning][TaskContextServer()] CTaskContext 'traj_gen' already bound to CORBA Naming Service.
+0.054 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+0.055 [ Warning][TaskContextServer()] CTaskContext 'traj_gen_Logger' already bound to CORBA Naming Service.
+0.055 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.

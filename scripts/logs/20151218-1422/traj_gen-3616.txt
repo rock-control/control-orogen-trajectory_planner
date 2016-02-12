@@ -1,0 +1,5 @@
+configureHook
+configureHook
+startHook
+Entering updateHook
+Enter number of trajectory points to be created

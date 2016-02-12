@@ -1,0 +1,8 @@
+0.043 [ Warning][TaskContextServer()] CTaskContext 'traj_gen' already bound to CORBA Naming Service.
+0.044 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+0.045 [ Warning][TaskContextServer()] CTaskContext 'traj_gen_Logger' already bound to CORBA Naming Service.
+0.045 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+configureHook start
+configureHook start 2
+configureHook stop
+startHook

@@ -1,0 +1,94 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.8.0' compiled with GCC 4.8.4. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 1450444347024028684 ticks ( 1.45044e+09 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.000 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for rt_string
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.000 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.000 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.001 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.991 [ Info   ][TypekitRepository::Import] Loading Typekit std.
+0.991 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'std' from 'std-typekit'
+1.011 [ Info   ][TypekitRepository::Import] Loading Transport Typelib:///orogen/std.
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /bool
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /double
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /float
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /int16_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /int32_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /int64_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /int8_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /std/string
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /std/vector</double>
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /uint16_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /uint32_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /uint64_t
+1.012 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /uint8_t
+1.012 [ Info   ][Logger] Loaded RTT TypeKit/Transport '/orogen/std/TYPELIB' from 'std-transport-typelib'
+1.060 [ Info   ][TypekitRepository::Import] Loading Transport CORBA:///orogen/std.
+1.060 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /int16_t
+1.060 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /int64_t
+1.060 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /int8_t
+1.060 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /uint16_t
+1.060 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /uint64_t
+1.060 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /uint8_t
+1.060 [ Info   ][Logger] Loaded RTT TypeKit/Transport '/orogen/std/CORBA' from 'std-transport-corba'
+1.084 [ Info   ][TypekitRepository::Import] Loading Transport MQueue:///orogen/std.
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /bool
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /double
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /float
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /int16_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /int32_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /int64_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /int8_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /std/string
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /std/vector</double>
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /uint16_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /uint32_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /uint64_t
+1.084 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /uint8_t
+1.084 [ Info   ][Logger] Loaded RTT TypeKit/Transport '/orogen/std/MQueue' from 'std-transport-mqueue'
+1.085 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='orocosrb_2655'
+1.085 [ Info   ][orocosrb_2655] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 2663 ).
+1.085 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='orocosrb_2655.CorbaDispatch'
+1.085 [ Info   ][orocosrb_2655.CorbaDispatch] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 2664 ).
+1.085 [ Info   ][Logger] Started orocosrb_2655.CorbaDispatch.
+1.085 [ Info   ][Logger] Creating new TaskContextServer for orocosrb_2655
+1.086 [ Info   ][TaskContextServer()] CTaskContext 'orocosrb_2655' found CORBA Naming Service.
+1.086 [ Info   ][TaskContextServer()] Successfully added CTaskContext 'orocosrb_2655' to CORBA Naming Service.
+1.110 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+1.111 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 2665 ).
+2.184 [ Info   ][TypekitRepository::Import] Loading Typekit transformer.
+2.184 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'transformer' from 'transformer-typekit'
+2.217 [ Info   ][TypekitRepository::Import] Loading Transport Typelib:///orogen/transformer.
+2.221 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /std/vector</base/samples/RigidBodyState>
+2.221 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /transformer/ConfigurationState
+2.221 [ Info   ][TypekitRepository::Import] Registered new 'Typelib' transport for /transformer/TransformerStatus
+2.221 [ Info   ][Logger] Loaded RTT TypeKit/Transport '/orogen/transformer/TYPELIB' from 'transformer-transport-typelib'
+2.478 [ Info   ][TypekitRepository::Import] Loading Transport CORBA:///orogen/transformer.
+2.478 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /std/vector</base/samples/RigidBodyState>
+2.478 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /transformer/ConfigurationState
+2.478 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for /transformer/TransformerStatus
+2.478 [ Info   ][Logger] Loaded RTT TypeKit/Transport '/orogen/transformer/CORBA' from 'transformer-transport-corba'
+2.520 [ Info   ][TypekitRepository::Import] Loading Transport MQueue:///orogen/transformer.
+2.520 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /std/vector</base/samples/RigidBodyState>
+2.520 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /transformer/ConfigurationState
+2.520 [ Info   ][TypekitRepository::Import] Registered new 'MQueue' transport for /transformer/TransformerStatus
+2.521 [ Info   ][Logger] Loaded RTT TypeKit/Transport '/orogen/transformer/MQueue' from 'transformer-transport-mqueue'
