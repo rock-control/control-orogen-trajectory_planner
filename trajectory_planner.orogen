@@ -94,5 +94,3 @@ task_context "TrajExtractTask" do
 
   periodic 0.005
 end
-
-
