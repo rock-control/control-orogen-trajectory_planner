@@ -6,7 +6,6 @@
 #include <boost/iterator/iterator_concepts.hpp>
 #include <algorithm>  
 #include<trajectory_planner/joints_traj/Utils.hpp>
-#include<utils/ReadJointLimits.hpp>
 #include <stdlib.h> 
 #include<fstream>
 #include<stdio.h>
