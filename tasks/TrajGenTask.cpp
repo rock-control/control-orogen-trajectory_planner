@@ -5,7 +5,7 @@
 #include<math.h>
 #include <boost/iterator/iterator_concepts.hpp>
 #include <algorithm>  
-#include<utils/MyMath.hpp>
+#include<trajectory_planner/joints_traj/Utils.hpp>
 #include<utils/ReadJointLimits.hpp>
 #include <stdlib.h> 
 #include<fstream>

@@ -4,7 +4,7 @@ include(trajectory_plannerTaskLib)
 ADD_LIBRARY(${TRAJECTORY_PLANNER_TASKLIB_NAME} SHARED 
     ${TRAJECTORY_PLANNER_TASKLIB_SOURCES})
 add_dependencies(${TRAJECTORY_PLANNER_TASKLIB_NAME}
-    regen-typekit utils)
+    regen-typekit)
 
 TARGET_LINK_LIBRARIES(${TRAJECTORY_PLANNER_TASKLIB_NAME}
     ${OrocosRTT_LIBRARIES}
