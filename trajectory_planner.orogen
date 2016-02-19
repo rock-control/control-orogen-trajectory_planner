@@ -58,6 +58,9 @@ task_context "TrajGenTask" do
   property("traj_filepath", "std/string").
   doc("Robot trajectory filepath for extracting sparse joint trajectories")
 
+  property("robot_urdf_filepath", "std/string").
+  doc("Robot urdf filepath for extracting joint limits")
+
   input_port("in_user_response", "bool").
   doc("Input port to accept user response")
 
@@ -70,8 +73,6 @@ task_context "TrajGenTask" do
   output_port("out_joints_traj", "base/JointsTrajectory").
   doc("Outputs sparse trajectory points")
 
-  
-
   periodic 3.0
 end
 
@@ -80,7 +81,9 @@ task_context "TrajExtractTask" do
   needs_configuration
 
   runtime_states 'READY', 'EXTRACTING_TRAJ', 'WAITING_FOR_TRAJ'
-
+  
+  property("robot_urdf_filepath", "std/string").
+  doc("Robot urdf filepath for extracting joint limits")  
   
   input_port("in_joints_traj","base/JointsTrajectory").
   doc("Input port to accept user response")

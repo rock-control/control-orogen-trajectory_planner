@@ -34,7 +34,7 @@ bool TrajExtractTask::configureHook()
     totalTimeStep=0;
     extractState=WAITING_FOR_DATA;
     
-    base::JointLimits limits= utils::initFromURDF("/home/dfki.uni-bremen.de/rmenon/software/rock_traj/bundles/kuka_lbr/data/urdf/kuka_lbr_left_arm.urdf");
+    base::JointLimits limits= utils::initFromURDF(_robot_urdf_filepath.value());
     jointSamples.resize(limits.size());
     
     if( state() != WAITING_FOR_TRAJ)

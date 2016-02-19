@@ -16,18 +16,15 @@ using namespace utils;
 TrajGenTask::TrajGenTask(std::string const& name)
     : TrajGenTaskBase(name)
 {
-  std::cout<<"constructor1 "<<std::endl;
 }
 
 TrajGenTask::TrajGenTask(std::string const& name, RTT::ExecutionEngine* engine)
     : TrajGenTaskBase(name, engine)
 {
-  std::cout<<"constructor2"<<std::endl;
 }
 
 TrajGenTask::~TrajGenTask()
 {
-  std::cout<<"destructor "<<std::endl;
 }
 
 
@@ -42,7 +39,7 @@ bool TrajGenTask::configureHook()
   
     if (! TrajGenTaskBase::configureHook())
         return false;
-    limits=utils::initFromURDF("/home/dfki.uni-bremen.de/rmenon/software/rock_traj/bundles/kuka_lbr/data/urdf/kuka_lbr.urdf");
+    limits=utils::initFromURDF(_robot_urdf_filepath.value());
     jointsTrajOut.resize(limits.size(),10);
     jointsTrajOut.names=limits.names;
     trajGenState=GENERATION_READY;
