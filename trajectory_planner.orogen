@@ -39,10 +39,43 @@ task_context "JointsInterpolatorTask" do
   output_port("out_time_step_inter", "int").
   doc("Output port for current time step")
   
-  periodic 3.0
+  port_driven :in_joints_traj
 
 end
 
+
+task_context "TrajGenOnlineTask" do
+  needs_configuration
+
+runtime_states 'READY', 'GENERATING', 'FINISHED'
+
+  property("robot_urdf_filepath", "std/string").
+  doc("Robot urdf filepath for extracting joint limits")
+
+  property("use_actual_position_starting", "bool").
+  doc("True to indicate that actual position is to be used as first trajectory point")
+
+  property("single_trajectory_point", "bool").
+  doc("True to indicate only the next point is available and hence base JointCommands will be used")
+
+  input_port("in_joints_command", "base/commands/Joints").
+  doc("Input port to accept single joint command when single_trajectory_point is true")
+
+  input_port("in_joints_trajectory", "base/JointsTrajectory").
+  doc("Input port to accept sparse trajectory points if necessary else can be given directly to joints interpolator")
+
+  input_port("in_joints_state", "base/samples/Joints").
+  doc("Input port to accept joint state")
+
+  output_port("out_joints_state", "base/samples/Joints").
+  doc("Output port to display joint state")
+
+  output_port("out_joints_traj", "base/JointsTrajectory").
+  doc("Outputs sparse trajectory points")
+  
+  periodic 0.1
+
+end
 
 task_context "TrajGenTask" do
   needs_configuration
